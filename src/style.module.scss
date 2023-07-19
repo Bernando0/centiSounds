@@ -1,0 +1,482 @@
+@import "./variables.module.scss";
+@import './fonts/casper.css';
+
+.main {
+    display: flex;
+    background: whitesmoke;
+
+    &__navigation {
+        width: 14%;
+        background: $color_nav;
+        color: white;
+        min-height: 100vh;
+    }
+
+    &__content {
+        background: $color_content;
+        width: 86%;
+    }
+}
+
+.mainLight {
+    display: flex;
+    background: whitesmoke;
+
+    &__navigation {
+        width: 14%;
+        background: #828282;
+        color: rgb(32, 32, 32);
+        height: 100vh;
+    }
+
+    &__content {
+        background: #c2c2c2;
+        width: 86%;
+    }
+}
+
+.cart {
+    font-family: "Casper";
+    font-style: normal;
+    margin: 0 25px 0 0;
+    color: $light2Color;
+
+    &__container {
+        max-width: 250px;
+
+    }
+
+    &__photo {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        height: auto;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    &__text {
+        padding-top: 2px;
+    }
+}
+
+.slider {
+    display: flex;
+    padding: 25px 50px 50px 50px;
+
+}
+
+.slider a {
+    text-decoration: none;
+}
+
+.titleslider {
+    padding: 30px 0 0 0;
+    text-align: right;
+    margin-right: 100px;
+}
+
+.titlesliderLight {
+    padding: 50px 0 0 0;
+    color: #383838;
+    font-size: 25px;
+    font-family: "Casper";
+    text-align: right;
+    margin-right: 100px;
+}
+
+.titleslider a {
+    font-size: 25px;
+    font-family: "Casper";
+    text-decoration: none;
+
+    font-style: normal;
+    color: $light2Color;
+}
+
+.greyColorText {
+    color: #ADADAD;
+}
+
+.list {
+    text-align: left;
+    color: #ADADAD;
+
+    &__img {
+        max-width: 60px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    &__listitem {
+        display: flex;
+        border-bottom: solid 1px $lightGrey;
+        padding: 10px;
+    }
+
+    &__names {
+        line-height: 6px;
+        padding-left: 10px;
+    }
+
+    &__title {
+        color: whitesmoke;
+    }
+}
+
+.list ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $color_nav;
+
+    &__inputs {
+        display: inline-block;
+    }
+
+    &__inner {
+        background: $color_content;
+        color: $lightColor;
+        border-radius: 10px;
+        font-family: "Casper";
+        padding: 24px;
+
+        &__i {
+            padding: 100px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 20px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+.inputpanel {
+    background: $light3Color;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    width: 400px;
+    height: 30px;
+    font-size: 18px;
+    margin: 10px;
+    padding: 0 5px;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: none;
+    font-weight: 300;
+    font-family: "Casper";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn:before,
+.btn:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.btn:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+
+.btn:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.btn:hover:before {
+    transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+}
+
+.btn:hover:after {
+    transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.additional_message {
+    display: flex;
+    color: #828282;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.additional_message a {
+    color: #ADADAD;
+}
+
+.additional_message h4 {
+    text-align: center;
+}
+
+.pointerblock {
+    cursor: pointer;
+}
+
+.buttomPlayer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    background: #383838;
+
+
+
+    &__centerblock {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    &__progress {
+        background: rgb(32, 32, 32);
+        border-radius: 5px;
+        height: 8px;
+        margin: 1px;
+    }
+
+    &__volumepr {
+        background: rgb(32, 32, 32);
+        border-radius: 5px;
+        height: 5px;
+        margin: 1px;
+    }
+
+    &__btnprev {
+        padding-right: 50px;
+    }
+
+    &__btnvolume {
+        padding-left: 45px;
+        display: flex;
+    }
+
+    &__btnplay img {
+        cursor: pointer;
+    }
+
+    &__btnprev img {
+        width: 25px;
+        cursor: pointer;
+
+    }
+
+    &__dropbtn {
+        font-size: 16px;
+        border: none;
+    }
+
+    &__dropPanel {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin-right: 100px;
+    }
+
+    &__dropContent {
+        display: none;
+        position: absolute;
+        right: 10px;
+        width: 150px;
+        border-radius: 10px;
+        bottom: 50px;
+
+    }
+
+    &__dropContent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        font-family: "Casper";
+        cursor: pointer;
+        font-size: 18px;
+        font-family: "Casper";
+        text-decoration: none;
+        font-style: normal;
+    }
+
+    &__dropContent a:hover {
+        color: rgb(71, 71, 71);
+    }
+
+    &__dropPanel:hover &__dropContent {
+        display: block;
+        background-color: darkgrey;
+    }
+
+
+
+
+    &__btnvolume img {}
+
+    &__words {
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    &__rightBlock {
+        width: 15%;
+    }
+
+    &__rightBlock img {
+        max-width: 50px;
+        height: auto;
+        margin-left: 50%;
+    }
+
+    &__titlew {
+        color: #c2c2c2;
+    }
+
+    &__authorw {
+        color: #828282;
+    }
+
+    &__innerBlock {
+        margin: 20px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+
+        &__title {
+            display: flex;
+            justify-content: left;
+            width: 15%;
+        }
+
+        &__title h3 {
+            font-size: 13px;
+            line-height: 0.5
+        }
+
+        &__title img {
+            max-width: 60px;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        &__player {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__player img {
+            max-width: 30px;
+            height: auto;
+        }
+
+        &__progresscontainer {
+            border-radius: 5px;
+            width: 100%;
+            height: 10px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            background: #5c5c5c;
+            cursor: pointer;
+        }
+
+        &__volumecontainer {
+            margin-left: 10px;
+            border-radius: 5px;
+            width: 100px;
+            height: 5px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            background: #5c5c5c;
+            cursor: pointer;
+        }
+    }
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown_content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    border-radius: 10px;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown_content a:hover {
+    color: rgb(71, 71, 71)
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown_content {
+    display: block;
+    background-color: darkgrey;
+}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {}
